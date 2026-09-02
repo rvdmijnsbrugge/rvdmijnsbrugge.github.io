@@ -1,0 +1,140 @@
+/*
+
+  © 2026 Rembrant Van der Mijnsbrugge
+  All rights reserved
+
+  Contact r@mote.agency for licensing
+
+  Revenue = Session × Conversion Rate × Average Order Value
+  Profit = Customer Lifetime Value ÷ Customer Acquisition Cost
+
+  https://css-tricks.com/there-is-no-need-to-trap-focus-on-a-dialog-element
+
+*/
+
+#search {
+  width: calc(100vw - var(--leading) * 1);
+  padding: 0 calc(var(--leading) * 0.5);
+  margin: calc(var(--leading) * 0.5);
+  border: none;
+}
+@media(min-width: 768px) {
+  #search {
+    width: calc(100vw / 8 * 5);
+    margin-inline: auto;
+  }
+}
+
+#search header {
+  border-bottom: 1px solid rgb(0 0 0 / 0.125);
+  grid-template-columns: auto 1fr auto;
+  border-top: 1px solid transparent;
+  display: grid;
+}
+#search header:hover {
+  border-bottom: 1px solid rgb(0 0 0 / 0.25);
+}
+#search header:focus-within {
+  border-bottom: 1px solid rgb(0 0 0 / 1);
+}
+#search header form {
+  display: contents;
+}
+#search header button {
+  padding: calc(21px * 0.25 - 2px) calc(21px * 0.5);
+  min-width: calc(21px * 1.5);
+  color: rgb(0 0 0 / 0.875);
+  letter-spacing: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+#search header button:hover {
+  color: rgb(0 0 0 / 1);
+}
+#search header input[type="search"] {
+  padding: calc(21px * 0.25 - 1px) 0;
+  letter-spacing: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  appearance: none;
+  background: none;
+  font-size: 16px;
+  outline: none;
+  border: none;
+}
+#search header input[type="search"]::placeholder {
+  color: rgb(0 0 0 / 0.375);
+  font-size: 1rem;
+}
+#search header input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+#search header button[type="submit"] {
+  margin-left: calc(21px * -0.5);
+  order: -1;
+}
+#search header button[popovertarget="search"] {
+  margin-right: calc(21px * -0.5);
+}
+
+#search menu {
+  padding: 0 0 calc(21px * 1) 0;
+  gap: calc(21px * 0.5);
+  list-style: none;
+  display: grid;
+  margin: 0;
+}
+#search menu button {
+  line-height: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+}
+#search menu button:hover {
+  text-decoration: underline rgb(0 0 0 / 0.25);
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+#search output {
+  gap: calc(21px * 0);
+  display: grid;
+}
+#search output ol {
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 0 calc(21px * 1) 0;
+  gap: calc(21px * 0.5);
+  list-style: none;
+  display: grid;
+  padding: 0;
+}
+#search output figure {
+  margin: 0 0 calc(21px * 0.5) 0;
+  background: rgb(240 238 233);
+  aspect-ratio: 4 / 5;
+}
+#search output a {
+  text-decoration-color: rgb(0 0 0 / 0);
+  text-underline-offset: 2px;
+  color: inherit;
+}
+#search output a:hover {
+  text-decoration-color: rgb(0 0 0 / 0.25);
+}
+@media(width < 768px) {
+  #search output li:nth-child(n+4) {
+    display: none;
+  }
+}
+@media(min-width: 768px) {
+  #search output ol {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

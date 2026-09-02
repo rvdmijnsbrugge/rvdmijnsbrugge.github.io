@@ -1,0 +1,94 @@
+/*
+
+  © 2026 Rembrant Van der Mijnsbrugge
+  All rights reserved
+
+  Contact r@mote.agency for licensing
+
+  https://www.w3.org/TR/CSS2/generate.html#content
+
+*/
+
+#cart {
+  height: calc(100dvh - var(--leading) * 1);
+  margin: calc(var(--leading) * 0.5);
+  grid-template-rows: auto 1fr auto;
+  width: calc(100vw / 8 * 2);
+  margin-inline-start: auto;
+  min-width: 360px;
+  border: none;
+  padding: 0;
+}
+#cart:popover-open {
+  display: grid;
+}
+
+#cart header {
+  place-content: end;
+  display: grid;
+}
+
+#cart ol {
+  gap: calc(21px * 0.5);
+  align-content: start;
+  list-style: none;
+  overflow-y: auto;
+  display: grid;
+  padding: 0;
+  margin: 0;
+}
+#cart article {
+  grid-template-columns: 1fr 1fr;
+  padding: 0 calc(21px * 0.5);
+  gap: calc(21px * 0.5);
+  display: grid;
+}
+#cart a {
+  display: block;
+}
+#cart figure {
+  background: rgb(240 238 233 / 1);
+  aspect-ratio: 4 / 5;
+  margin: 0;
+}
+#cart data {
+  display: block;
+}
+#cart dl {
+  margin: calc(21px * 1) 0;
+}
+#cart dt {
+  display: inline;
+}
+#cart dt:after {
+  content: ': ';
+}
+#cart dd {
+  display: inline;
+  margin: 0;
+}
+#cart dd:after {
+  display: block;
+  content: '';
+}
+
+#cart footer {
+  grid-template-columns: 1fr auto;
+  padding: calc(21px * 0.5);
+  gap: calc(21px * 0.5);
+  display: grid;
+}
+#cart form {
+  grid-column: 1 / -1;
+  display: grid;
+}
+#cart button[type="submit"] {
+  padding: calc(21px * 0.25) calc(21px * 0.75);
+  background: rgb(0 0 0 / 0.875);
+  color: rgb(255 255 255 / 1);
+  appearance: none;
+  border: none;
+}
+#cart button[type="submit"]:hover {
+  background: rgb(0 0 0 / 1);
+}

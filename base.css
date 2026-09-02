@@ -1,0 +1,119 @@
+/*
+
+  © 2026 Rembrant Van der Mijnsbrugge
+  All rights reserved
+
+  Contact r@mote.agency for licensing
+
+  Revenue = Session × Conversion Rate × Average Order Value
+  Profit = Customer Lifetime Value ÷ Customer Acquisition Cost
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --light: 240 238 233;
+  --leading: 21px;
+  --dark: 0 0 0;
+}
+
+::backdrop {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%' height='100%' filter='url(%23noise)' opacity='0.25'/></svg>");
+  background-color: rgb(255 255 255 / 0.75);
+  background-blend-mode: multiply;
+  background-size: 100px 100px;
+  backdrop-filter: blur(21px);
+  background-repeat: repeat;
+}
+
+::selection {
+  background: rgb(var(--light) / 1);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  line-height: var(--leading);
+  letter-spacing: 0.125px;
+  font-size: 13px;
+}
+
+body {
+  margin: 0;
+}
+
+dialog {
+  background: rgb(255 255 255 / 0.9375);
+  backdrop-filter: blur(21px);
+}
+
+figure {
+  margin: 0;
+}
+
+select {
+  color: inherit;
+}
+
+svg {
+  display: block;
+}
+
+h1 {
+  line-height: inherit;
+  font-weight: inherit;
+  font-size: 21px;
+}
+
+p {
+  margin: calc(var(--leading) * 1) 0;
+}
+
+a {
+  text-decoration-color: rgb(var(--dark) / 0);
+  text-underline-offset: 2px;
+  color: inherit;
+}
+a u {
+  text-decoration: none;
+}
+a:has(u) {
+  text-decoration-color: rgb(var(--dark) / 0.125);
+}
+a:hover {
+  text-decoration-color: rgb(var(--dark) / 0.25);
+}
+
+button {
+  letter-spacing: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+button[type="button"] {
+  background: none;
+  appearance: none;
+  color: inherit;
+  outline: none;
+  border: none;
+  padding: 0;
+}
+button[type="button"]:is(:hover, :focus) {
+  text-decoration: underline rgb(var(--dark) / 0.25);
+  text-underline-offset: 2px;
+}
+button[popovertargetaction="hide"] {
+  min-width: calc(var(--leading) * 1.5);
+  padding: calc(var(--leading) * 0.5);
+  background: rgb(var(--dark) / 0);
+  color: rgb(var(--dark)/ 0.875);
+  appearance: none;
+  outline: none;
+  border: none;
+}
+button[popovertargetaction="hide"]:is(:hover, :focus) {
+  color: rgb(var(--dark) / 1);
+}

@@ -1,0 +1,184 @@
+/*
+
+  © 2026 Rembrant Van der Mijnsbrugge
+  All rights reserved
+
+  Contact r@mote.agency for licensing
+
+  Revenue = Session × Conversion Rate × Average Order Value
+  Profit = Customer Lifetime Value ÷ Customer Acquisition Cost
+
+*/
+
+article:has(nav) {
+  position: relative;
+}
+
+article:has(nav) a {
+  text-decoration: none;
+}
+
+article:has(nav) figure {
+  margin: 0 0 calc(var(--leading) * 0.5) 0;
+  timeline-scope: --article;
+  position: relative;
+}
+article:has(nav) figure::after {
+  bottom: calc(var(--leading) * 0 + 0.5px);
+  background: rgb(var(--dark) / 1);
+  animation: article linear both;
+  animation-timeline: --article;
+  transform-origin: left;
+  width: calc(100% / 6);
+  position: absolute;
+  content: '';
+  height: 1px;
+}
+@keyframes article {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(100% * 5));
+  }
+}
+@media (hover: hover) {
+  article:has(nav) figure::after {
+    width: calc(100% / 5);
+    opacity: 0;
+  }
+  article:has(nav) figure:hover::after {
+    opacity: 1;
+  }
+  @keyframes article {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(100% * 4));
+    }
+  }
+}
+article:has(nav) figure ol {
+  scroll-timeline: --article inline;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overflow-x: scroll;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+article:has(nav) figure ol::-webkit-scrollbar {
+  display: none;
+}
+article:has(nav) figure li {
+  background: rgb(var(--light) / 1);
+  scroll-snap-align: center;
+  place-content: center;
+  aspect-ratio: 4 / 5;
+  flex-shrink: 0;
+  display: grid;
+  width: 100%;
+}
+@media (hover: hover) {
+  article:has(nav) figure li:first-of-type {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+  }
+  article:has(nav) figure li:not(:first-of-type) {
+    opacity: 0;
+  }
+  article:has(nav):hover figure li {
+    opacity: 1;
+  }
+}
+
+article:has(nav) > header {
+  grid-template-columns: 1fr auto;
+  display: grid;
+}
+
+article:has(nav) > menu {
+  margin: 0 0 calc(var(--leading) * 0.5) 0;
+  gap: calc(var(--leading) * 0.5);
+  list-style: none;
+  display: flex;
+  opacity: 0;
+  padding: 0;
+}
+article:has(nav):hover > menu {
+  opacity: 1;
+}
+article:has(nav) > menu button {
+  background: none;
+  appearance: none;
+  color: inherit;
+  outline: none;
+  border: none;
+  padding: 0;
+}
+article:has(nav) > menu button[disabled] {
+  opacity: 0.25;
+}
+
+article:has(nav) > nav {
+  gap: calc(var(--leading) / 2 - 1px + 1px * 2);
+  display: flex;
+}
+article:has(nav) > nav a {
+  border: 1px solid rgb(var(--dark) / 0);
+  box-sizing: border-box;
+  padding: calc(1px * 2);
+  height: var(--leading);
+  width: var(--leading);
+  position: relative;
+  outline: none;
+}
+article:has(nav) > nav a[aria-disabled="true"] {
+  pointer-events: none;
+  opacity: 0.25;
+}
+article:has(nav) > nav a:before {
+  background: rgb(var(--light) / 1);
+  inset: calc(1px + 1px * 2);
+  position: absolute;
+  content: '';
+}
+article:has(nav) > nav a:is(:hover, :focus) {
+  border-color: rgb(var(--dark) / 0.125);
+}
+article:has(nav) > nav a:active {
+  border-color: rgb(var(--dark) / 0.25);
+}
+article:has(nav) > nav a.active{
+  border-color: rgb(var(--dark) / 1);
+}
+
+article:has(nav) > small {
+  left: calc(var(--leading) * 0.5);
+  top: calc(var(--leading) * 0.25);
+  font-size: inherit;
+  position: absolute;
+  opacity: 0.25;
+}
+
+article:has(nav) > button {
+  padding: calc(var(--leading) * 0.25) calc(var(--leading) * 0.125);
+  position: absolute;
+  background: none;
+  appearance: none;
+  color: inherit;
+  outline: none;
+  border: none;
+  opacity: 0;
+  right: 0;
+  top: 0;
+}
+article:has(nav):hover > button {
+  opacity: 1;
+}
+article:has(nav) > button:hover svg {
+  fill: currentcolor;
+}

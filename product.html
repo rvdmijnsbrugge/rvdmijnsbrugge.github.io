@@ -1,0 +1,857 @@
+<!--
+
+  © 2026 Rembrant Van der Mijnsbrugge
+  All rights reserved
+
+  Contact r@mote.agency for licensing
+
+  Revenue = Session × Conversion Rate × Average Order Value
+  Profit = Customer Lifetime Value ÷ Customer Acquisition Cost
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="results.css">
+    <link rel="stylesheet" href="filters.css">
+    <link rel="stylesheet" href="empty.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="product.css">
+    <title>Emergence: a CSS framework based on behavioral science</title>
+  </head>
+  <body>
+    <header>
+      <button type="button" popovertarget="menu">Menu</button>
+      <button type="button" popovertarget="search">Search</button>
+      <button type="button" popovertarget="results">Results</button>
+      <a href="/"><u>Logo</u></a>
+      <button type="button" popovertarget="filters">Filters</button>
+      <button type="button" popovertarget="empty">Empty</button>
+      <button type="button" popovertarget="cart">Cart</button>
+    </header>
+    <main id="product">
+      <nav>
+        <ol>
+          <li><a href="#image-1">1</a></li>
+          <li><a href="#image-2">2</a></li>
+          <li><a href="#image-3">3</a></li>
+          <li><a href="#image-4">4</a></li>
+          <li><a href="#image-5">5</a></li>
+        </ol>
+      </nav>
+      <figure>
+        <ol>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+        </ol>
+      </figure>
+      <div>
+        <section class="details">
+           <div class="group">
+             <h1>
+               Cotton Poplin Shirt
+             </h1>
+             <div class="bookmark">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" stroke="currentColor" fill="none" height="21" width="21">
+                 <polygon points="14,17.5 10.5,15.5 7,17.5 7,3.5 14,3.5 14,17.5"/>
+               </svg>
+             </div>
+           </div>
+    
+           <p class="price">
+             $1,380
+           </p>
+    
+           <div class="label">
+             Color: Bone
+           </div>
+    
+           <div class="group">
+             <div class="swatches">
+               <a href="product" class="active"></a>
+               <a href="product"></a>
+               <a href="product" aria-disabled="true"></a>
+             </div>
+             <a class="link" href="#size-guide">
+               Size Guide
+             </a>
+           </div>
+    
+           <select>
+            <option>
+              Select Size
+            </option>
+            <option>
+              XS — Only 1 left
+            </option>
+            <option>
+              S
+            </option>
+            <option disabled>
+              M — Sold out
+            </option>
+            <option>
+              L — Only 1 left
+            </option>
+            <option disabled>
+              XL — Sold out
+            </option>
+          </select>
+    
+         <button>Add to Bag</button>
+    
+         <div class="accordion">
+            <details name="product" open>
+              <summary>
+                Description
+              </summary>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget felis vel dui efficitur dignissim. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+              </div>
+            </details>
+            <details name="product">
+              <summary>
+                Composition
+              </summary>
+              <div>
+                Nam tincidunt ac mauris sed gravida. Vivamus id enim in ligula scelerisque rutrum. Phasellus laoreet facilisis faucibus. Phasellus sed elit nec lectus finibus egestas vel sit amet risus.
+              </div>
+            </details>
+            <details name="product">
+              <summary>
+                Care
+              </summary>
+              <div>
+                Sed eget diam id nisi rutrum consequat. Aliquam vestibulum nibh at rutrum facilisis. Curabitur sit amet dictum ante. In consectetur in sem at euismod. Donec elementum quam odio, nec imperdiet orci auctor eu. Vestibulum sed risus dui. Suspendisse vitae ex sed nibh vulputate fringilla.
+              </div>
+            </details>
+          </div>
+    
+        </section>
+        <!--     
+        <section class="complementary">
+          <h4>Complementary</h4>
+          <div class="cards">
+            <div class="card">
+              <div class="images">
+                <div class="image">0</div>
+                <div class="image">1</div>
+                <div class="image">2</div>
+                <div class="image">3</div>
+                <div class="image">4</div>
+                <div class="image">5</div>
+              </div>
+              <div class="name">
+                Soft Margaux 15 Bag
+              </div>
+              <div class="price">
+                $1,100
+              </div>
+              <div class="sizes">
+                <div class="size" aria-disabled="true">
+                  XS
+                </div>
+                <div class="size">
+                  S
+                </div>
+                <div class="size">
+                  M
+                </div>
+                <div class="size" aria-disabled="true">
+                  L
+                </div>
+                <div class="size" aria-disabled="true">
+                  XL
+                </div>
+              </div>
+              <div class="swatches">
+                <a href="product" class="active"></a>
+                <a href="product"></a>
+                <a href="product" aria-disabled="true"></a>
+              </div>
+              <div class="badge">
+                Pre-order
+              </div>
+              <div class="bookmark">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" stroke="currentColor" fill="none" height="21" width="21">
+                  <polygon points="14,17.5 10.5,15.5 7,17.5 7,3.5 14,3.5 14,17.5"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card">
+              <div class="images">
+                <div class="image">0</div>
+                <div class="image">1</div>
+                <div class="image">2</div>
+                <div class="image">3</div>
+                <div class="image">4</div>
+                <div class="image">5</div>
+              </div>
+              <div class="name">
+                Soft Margaux 15 Bag
+              </div>
+              <div class="price">
+                $1,100
+              </div>
+              <div class="sizes">
+                <div class="size" aria-disabled="true">
+                  XS
+                </div>
+                <div class="size">
+                  S
+                </div>
+                <div class="size">
+                  M
+                </div>
+                <div class="size" aria-disabled="true">
+                  L
+                </div>
+                <div class="size" aria-disabled="true">
+                  XL
+                </div>
+              </div>
+              <div class="swatches">
+                <a href="product" class="active"></a>
+                <a href="product"></a>
+                <a href="product" aria-disabled="true"></a>
+              </div>
+              <div class="badge">
+                Pre-order
+              </div>
+              <div class="bookmark">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" stroke="currentColor" fill="none" height="21" width="21">
+                  <polygon points="14,17.5 10.5,15.5 7,17.5 7,3.5 14,3.5 14,17.5"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+         -->
+      </div>
+      <section class="about">
+        <figure></figure>
+        <div>
+          <h2>About the Collection</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel lobortis massa. Proin maximus, orci non rutrum vehicula, mi ipsum maximus tortor, faucibus efficitur nulla libero a velit. Praesent tristique ac ante non interdum. Fusce vitae justo vel nulla tincidunt maximus. Nulla vestibulum ex ut urna porta, in fringilla eros venenatis.</p>
+          <h3>History</h3>
+          <p>Suspendisse ut volutpat est. Cras ligula augue, molestie eu elementum vel, mattis in purus. Integer lacinia efficitur justo non feugiat. Nunc ut mauris suscipit, maximus nibh in, congue enim. Suspendisse molestie urna eu elit dictum, at varius velit sollicitudin. Curabitur pretium turpis id consequat ullamcorper.</p>
+          <h3>Expertise</h3>
+          <p>Duis venenatis dui in arcu elementum, et lacinia eros venenatis. Integer nisi lectus, gravida a mauris vitae, facilisis dignissim tellus. Ut molestie vulputate nibh, a tristique lacus dapibus eu. Pellentesque laoreet ex ut justo tempus pellentesque ut ac erat.</p>
+        </div>
+      </section>
+      <section class="products">
+        <h2>More from the collection</h2>
+        <div class="cards">
+          <article>
+            <a href="product">
+              <figure>
+                <ol>
+                  <li>0</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ol>
+              </figure>
+            </a>
+            <header>
+              <a href="product">
+                Cotton Poplin Shirt
+              </a>
+              <data value="1380">
+                $1,380
+              </data>
+            </header>
+            <menu>
+              <li><button disabled>XS</button></li>
+              <li><button>S</button></li>
+              <li><button>M</button></li>
+              <li><button disabled>L</button></li>
+              <li><button disabled>XL</button></li>
+            </menu>
+            <nav>
+              <a href="product" class="active"></a>
+              <a href="product"></a>
+              <a href="product" aria-disabled="true"></a>
+            </nav>
+            <small>
+              Pre-order
+            </small>
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" stroke="currentColor" fill="none" height="21" width="21">
+                <polygon points="14,17.5 10.5,15.5 7,17.5 7,3.5 14,3.5 14,17.5"/>
+              </svg>
+            </button>
+          </article>
+          <article>
+            <a href="product">
+              <figure>
+                <ol>
+                  <li>0</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ol>
+              </figure>
+            </a>
+            <header>
+              <a href="product">
+                Silk Twill Dress
+              </a>
+              <data value="1380">
+                $1,380
+              </data>
+            </header>
+            <menu>
+              <li><button disabled>XS</button></li>
+              <li><button>S</button></li>
+              <li><button>M</button></li>
+              <li><button disabled>L</button></li>
+              <li><button disabled>XL</button></li>
+            </menu>
+            <nav>
+              <a href="product" class="active"></a>
+              <a href="product"></a>
+              <a href="product" aria-disabled="true"></a>
+            </nav>
+            <small>
+              Pre-order
+            </small>
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" stroke="currentColor" fill="none" height="21" width="21">
+                <polygon points="14,17.5 10.5,15.5 7,17.5 7,3.5 14,3.5 14,17.5"/>
+              </svg>
+            </button>
+          </article>
+          <article>
+            <a href="product">
+              <figure>
+                <ol>
+                  <li>0</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ol>
+              </figure>
+            </a>
+            <header>
+              <a href="product">
+                Wool Gabardine Coat
+              </a>
+              <data value="1380">
+                $1,380
+              </data>
+            </header>
+            <menu>
+              <li><button disabled>XS</button></li>
+              <li><button>S</button></li>
+              <li><button>M</button></li>
+              <li><button disabled>L</button></li>
+              <li><button disabled>XL</button></li>
+            </menu>
+            <nav>
+              <a href="product" class="active"></a>
+              <a href="product"></a>
+              <a href="product" aria-disabled="true"></a>
+            </nav>
+            <small>
+              Pre-order
+            </small>
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" stroke="currentColor" fill="none" height="21" width="21">
+                <polygon points="14,17.5 10.5,15.5 7,17.5 7,3.5 14,3.5 14,17.5"/>
+              </svg>
+            </button>
+          </article>
+          <article>
+            <a href="product">
+              <figure>
+                <ol>
+                  <li>0</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ol>
+              </figure>
+            </a>
+            <header>
+              <a href="product">
+                Vicuña Knit Sweater
+              </a>
+              <data value="1380">
+                $1,380
+              </data>
+            </header>
+            <menu>
+              <li><button disabled>XS</button></li>
+              <li><button>S</button></li>
+              <li><button>M</button></li>
+              <li><button disabled>L</button></li>
+              <li><button disabled>XL</button></li>
+            </menu>
+            <nav>
+              <a href="product" class="active"></a>
+              <a href="product"></a>
+              <a href="product" aria-disabled="true"></a>
+            </nav>
+            <small>
+              Pre-order
+            </small>
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" stroke="currentColor" fill="none" height="21" width="21">
+                <polygon points="14,17.5 10.5,15.5 7,17.5 7,3.5 14,3.5 14,17.5"/>
+              </svg>
+            </button>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <form>
+        <p>Newsletter</p>
+        <i>Sign up for 10% off your first order.</i>
+        <fieldset>
+          <input type="email" placeholder="Email"/>
+          <button type="submit">
+            &rarr;
+          </button>
+        </fieldset>
+      </form>
+      <nav>
+        <a href="#">Information</a>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Colophon</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <a href="#">Policies</a>
+        <ul>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <a href="#">Social</a>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">TikTok</a></li>
+        </ul>
+      </nav>
+      <small>
+        &copy; 2026 Rembrant Van der Mijnsbrugge
+        <a href="https://mote.agency" target="_blank">
+          Site by Mote
+        </a>
+      </small>
+    </footer>
+    <dialog id="menu" popover>
+      <header>
+        <button popovertargetaction="hide" popovertarget="menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.5 10.5" height="10.5" width="10.5" stroke="currentColor" fill="none">
+            <polyline points="1,1 9.5,9.5"/>
+            <polyline points="1,9.5 9.5,1"/>
+          </svg>
+        </button>
+      </header>
+      <nav>
+        <details name="accordion" open>
+          <summary>Most popular</summary>
+          <ul>
+            <li><a href="collection">Most popular</a></li>
+            <li><a href="collection">Most popular</a></li>
+            <li><a href="collection">Most popular</a></li>
+          </ul>
+        </details>
+        <details name="accordion">
+          <summary>Most popular</summary>
+          <ul>
+            <li><a href="collection">Most popular</a></li>
+            <li><a href="collection">Most popular</a></li>
+            <li><a href="collection">Most popular</a></li>
+          </ul>
+        </details>
+        <details name="accordion">  
+          <summary>Most popular</summary>
+          <ul>
+            <li><a href="collection">Most popular</a></li>
+            <li><a href="collection">Most popular</a></li>
+            <li><a href="collection">Most popular</a></li>
+          </ul>
+        </details>
+      </nav>
+      <footer>
+        <a href="collection">
+          <figure></figure>
+          <i>Most popular</i> 
+        </a>
+      </footer>
+    </dialog>
+    <dialog id="search" popover>
+      <header>
+        <form role="search">
+          <input type="search" placeholder="Search"/>
+          <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.5 10.5" height="10.5" width="10.5" stroke="currentColor" fill="none">
+              <circle r="4.25" cx="5.25" cy="5.25"/>
+              <polyline points="9.5,9.5 8.5,8.5"/>
+            </svg>
+          </button>
+        </form>
+        <button popovertargetaction="hide" popovertarget="search">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.5 10.5" height="10.5" width="10.5" stroke="currentColor" fill="none">
+            <polyline points="1,1 9.5,9.5"/>
+            <polyline points="1,9.5 9.5,1"/>
+          </svg>
+        </button>
+      </header>
+      <p>Popular</p>
+      <menu>
+        <li><button type="button">Wool gabardine trousers</button></li>
+        <li><button type="button">Deerskin leather gloves</button></li>
+        <li><button type="button">Linen muslin jackets</button></li>
+        <li><button type="button">Cotton poplin shirts</button></li>
+        <li><button type="button">Silk twill dresses</button></li>
+      </menu>
+      <output>
+        <p>Trending</p>
+        <ol>
+          <li>
+            <article>
+              <a href="product">
+                <figure></figure>
+                Silk dress
+              </a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <a href="product">
+                <figure></figure>
+                Cotton shirt
+              </a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <a href="product">
+                <figure></figure>
+                Linen jacket
+              </a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <a href="product">
+                <figure></figure>
+                Wool coat
+              </a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <a href="product">
+                <figure></figure>
+                Vicuña sweater
+              </a>
+            </article>
+          </li>
+        </ol>
+      </output>
+    </dialog>
+    <dialog id="results" popover>
+      <header>
+        <form role="search">
+          <input type="search" placeholder="Search"/>
+          <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.5 10.5" height="10.5" width="10.5" stroke="currentColor" fill="none">
+              <circle r="4.25" cx="5.25" cy="5.25"/>
+              <polyline points="9.5,9.5 8.5,8.5"/>
+            </svg>
+          </button>
+        </form>
+        <button popovertarget="results">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.5 10.5" height="10.5" width="10.5" stroke="currentColor" fill="none">
+            <polyline points="1,1 9.5,9.5"/>
+            <polyline points="1,9.5 9.5,1"/>
+          </svg>
+        </button>
+      </header>
+      <p>Suggestions</p>
+      <menu>
+        <li><button type="button"><mark>Black</mark> gabardine trousers</button></li>
+        <li><button type="button"><mark>Black</mark> leather gloves</button></li>
+        <li><button type="button"><mark>Black</mark> muslin jackets</button></li>
+        <li><button type="button"><mark>Black</mark> poplin shirts</button></li>
+        <li><button type="button"><mark>Black</mark> twill dresses</button></li>
+      </menu>
+      <output>
+        <p>Results</p>
+        <ol>
+          <li>
+            <article>
+              <a href="product">
+                <figure></figure>
+                <mark>Black</mark> dress
+              </a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <a href="product">
+                <figure></figure>
+                <mark>Black</mark> shirt
+              </a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <a href="product">
+                <figure></figure>
+                <mark>Black</mark> jacket
+              </a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <a href="product">
+                <figure></figure>
+                <mark>Black</mark> coat
+              </a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <a href="product">
+                <figure></figure>
+                <mark>Black</mark> sweater
+              </a>
+            </article>
+          </li>
+        </ol>
+      </output>
+      <footer>
+        <i>138 Results</i>
+        <a href="collection">View all</a>
+      </footer>
+    </dialog>
+    <dialog id="filters" popover>
+      <header>
+        <button popovertargetaction="hide" popovertarget="filters"> 
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.5 10.5" height="10.5" width="10.5" stroke="currentColor" fill="none">
+            <polyline points="1,1 9.5,9.5"/>
+            <polyline points="1,9.5 9.5,1"/>
+          </svg>
+        </button>
+      </header>
+      <nav>
+        <details name="filters" open>
+          <summary>Availability</summary>
+          <ul>
+            <li><label><input type="checkbox" name="availability">Available</label></li>
+            <li><label><input type="checkbox" name="availability">Pre-order</label></li>
+            <li><label><input type="checkbox" name="availability">Limited</label></li>
+            <li><label><input type="checkbox" name="availability">Sold out</label></li>
+          </ul>
+        </details>
+        <details name="filters">
+          <summary>Category</summary>
+          <ul>
+            <li><label><input type="checkbox" name="material">Cotton</label></li>
+            <li><label><input type="checkbox" name="material">Linen</label></li>
+            <li><label><input type="checkbox" name="material">Silk</label></li>
+          </ul>
+        </details>
+        <details name="filters">
+          <summary>Designer</summary>
+          <ul>
+            <li><label><input type="checkbox" name="material">Cotton</label></li>
+            <li><label><input type="checkbox" name="material">Linen</label></li>
+            <li><label><input type="checkbox" name="material">Silk</label></li>
+          </ul>
+        </details>
+        <details name="filters">
+          <summary>Material</summary>
+          <ul>
+            <li><label><input type="checkbox" name="material">Merino</label></li>
+            <li><label><input type="checkbox" name="material">Vicuña</label></li>
+            <li><label><input type="checkbox" name="material">Cotton</label></li>
+            <li><label><input type="checkbox" name="material">Linen</label></li>
+            <li><label><input type="checkbox" name="material">Silk</label></li>
+          </ul>
+        </details>
+        <details name="filters">
+          <summary>Color</summary>
+          <ul>
+            <li><label><input type="checkbox" name="material">Cotton</label></li>
+            <li><label><input type="checkbox" name="material">Linen</label></li>
+            <li><label><input type="checkbox" name="material">Silk</label></li>
+          </ul>
+        </details>
+        <details name="filters">  
+          <summary>Size</summary>
+          <ul>
+            <li><label><input type="checkbox" name="size">XS</label></li>
+            <li><label><input type="checkbox" name="size">S</label></li>
+            <li><label><input type="checkbox" name="size">M</label></li>
+            <li><label><input type="checkbox" name="size">L</label></li>
+            <li><label><input type="checkbox" name="size">XL</label></li>
+          </ul>
+        </details>
+        <details name="filters">  
+          <summary>Sort</summary>
+          <ul>
+            <li><label><input type="radio" name="sort">Populatiry</label></li>
+            <li><label><input type="radio" name="sort">Price</label></li>
+            <li><label><input type="radio" name="sort">Date</label></li>
+          </ul>
+        </details>
+      </nav>
+      <footer>
+        <button type="reset">
+          Reset
+        </button>
+        <button type="submit">
+          Submit
+        </button>
+      </footer>
+    </dialog>
+    <dialog id="empty" popover>
+      <header>
+        <button popovertargetaction="hide" popovertarget="empty">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.5 10.5" height="10.5" width="10.5" stroke="currentColor" fill="none">
+            <polyline points="1,1 9.5,9.5"/>
+            <polyline points="1,9.5 9.5,1"/>
+          </svg>
+        </button>
+      </header>
+      <p>
+        Your cart is empty
+        <a href="collection"><u>Most popular</u></a>
+      </p>
+      <p>Most popular</p>
+      <ol>
+        <li>
+          <article>
+            <a href="product">
+              <figure></figure>
+              Deerskin leather gloves
+            </a>
+          </article>
+        </li>
+        <li>
+          <article>
+            <a href="product">
+              <figure></figure>
+              Wool gabardine trousers
+            </a>
+          </article>
+        </li>
+        <li>
+          <article>
+            <a href="product">
+              <figure></figure>
+              Linen muslin jacket
+            </a>
+          </article>
+        </li>
+        <li>
+          <article>
+            <a href="product">
+              <figure></figure>
+              Silk twill dress
+            </a>
+          </article>
+        </li>
+      </ol>
+    </dialog>
+    <dialog id="cart" popover>
+      <header>
+        <button popovertargetaction="hide" popovertarget="cart">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.5 10.5" height="10.5" width="10.5" stroke="currentColor" fill="none">
+            <polyline points="1,1 9.5,9.5"/>
+            <polyline points="1,9.5 9.5,1"/>
+          </svg>
+        </button>
+      </header>
+      <ol>
+        <li>
+          <article>
+            <a href="product"><figure></figure></a>
+            <div>
+              Deerskin leather gloves
+              <data value="138">$138</data>
+              <dl>
+                <dt>Color</dt><dd>Black</dd>
+                <dt>Size</dt><dd>9</dd>
+                <dt>Quantity</dt><dd>1</dd>
+              </dl>
+              <button type="button">Remove</button>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article>
+            <a href="product"><figure></figure></a>
+            <div>
+              Wool gabardine trousers
+              <data value="138">$318</data>
+              <dl>
+                <dt>Color</dt><dd>Black</dd>
+                <dt>Size</dt><dd>32</dd>
+                <dt>Quantity</dt><dd>1</dd>
+              </dl>
+              <button type="button">Remove</button>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article>
+            <a href="product"><figure></figure></a>
+            <div>
+              Linen muslin jacket
+              <data value="138">$813</data>
+              <dl>
+                <dt>Color</dt><dd>Bone</dd>
+                <dt>Size</dt><dd>40</dd>
+                <dt>Quantity</dt><dd>1</dd>
+              </dl>
+              <button type="button">Remove</button>
+            </div>
+          </article>
+        </li>
+      </ol>
+      <footer>
+        <i>Subtotal</i>
+        <data value="3180">$1,830</data>
+        <form action="#checkout">
+          <button type="submit">Checkout</button>
+        </form>
+      </footer>
+    </dialog>
+  </body>
+</html>

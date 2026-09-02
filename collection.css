@@ -1,0 +1,181 @@
+/*
+
+  © 2026 Rembrant Van der Mijnsbrugge
+  All rights reserved
+
+  Contact r@mote.agency for licensing
+
+  Revenue = Session × Conversion Rate × Average Order Value
+  Profit = Customer Lifetime Value ÷ Customer Acquisition Cost
+
+*/
+
+#collection {
+  padding-inline: calc(var(--leading) * 0.5);
+  padding-bottom: calc(var(--leading) * 1);
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(var(--leading) * 2) 0;
+  display: grid;
+}
+@media(min-width: 768px) {
+  #collection {
+    padding-inline: calc(var(--leading) * 1.5);
+    padding-bottom: calc(var(--leading) * 2);
+    grid-template-columns: repeat(24, 1fr);
+    gap: calc(var(--leading) * 3) 0;
+  }
+}
+
+#collection > header {
+  padding-inline: calc(var(--leading) * 0.5);
+  margin-bottom: calc(var(--leading) * -2.5);
+  grid-template-columns: 1fr auto;
+  grid-column: 1 / -1;
+  display: grid;
+}
+#collection > header > h1 {
+  margin: calc(21px * 1) 0;
+  font-weight: inherit;
+  grid-column: 1 / -1;
+}
+#collection > header > p {
+  margin: 0 0 calc(21px * 0.5) 0;
+  grid-column: 1 / -1;
+}
+@media(min-width: 768px) {
+  #collection > header {
+    padding-inline: calc(var(--leading) * 1.5);
+    margin-bottom: calc(var(--leading) * -3.5);
+    grid-column: span 9;
+  }
+}
+
+#collection > nav {
+  padding-inline: calc(var(--leading) * 0.5);
+  margin-bottom: calc(var(--leading) * -2);
+  grid-template-columns: 1fr auto;
+  grid-column: 1 / -1;
+  display: grid;
+}
+#collection > nav output {
+  margin: calc(21px * 1) 0;
+}
+#collection > nav button {
+  padding: 0;
+}
+@media(min-width: 768px) {
+  #collection > nav {
+    padding-inline: calc(var(--leading) * 1.5);
+    margin-bottom: calc(var(--leading) * -3);
+  }
+}
+
+#collection > .products {
+  display: contents;
+}
+#collection > .products article {
+  margin-inline: calc(var(--leading) * 0.5);
+}
+#collection article:nth-child(n+6) {
+  order: 2;
+}
+#collection article:nth-child(n+12) {
+  order: 3;
+}
+@media(min-width: 768px) {
+  #collection > .products article {
+    margin-inline: calc(var(--leading) * 1.5);
+    grid-column: span 6;
+  }
+}
+
+#collection .overlay {
+  padding: calc(var(--leading) * 1.5) calc(var(--leading) * 1);
+  margin: 0 calc(var(--leading) * 0.5);
+  background: rgb(var(--dark) / 0.875);
+  place-content: end center;
+  text-align: center;
+  display: grid;
+  color: white;
+  order: 1;
+}
+#collection .overlay h3 {
+  margin: 0 0 calc(var(--leading) * 0.5) 0;
+  line-height: var(--leading);
+  font-weight: inherit;
+  font-size: 17px;
+}
+#collection .overlay p {
+  margin: 0 0 calc(var(--leading) * 1) 0;
+}
+#collection .overlay a {
+  text-decoration-color: rgba(255 255 255 / 0.25);
+  text-underline-offset: 2px;
+  color: inherit;
+}
+#collection .overlay a:is(:hover, :focus) {
+  text-decoration-color: rgb(255 255 255 / 0.5);
+}
+@media(min-width: 768px) {
+  #collection > .overlay {
+    margin-inline: calc(var(--leading) * 1.5);
+    grid-column: span 6;
+  }
+}
+
+#collection .interstitial {
+  margin-inline: calc(var(--leading) * 0.5);
+  gap: calc(21px * 0.5);
+  align-content: start;
+  grid-column: span 2;
+  display: grid;
+  order: 2;
+}
+#collection .interstitial .media {
+  height: calc((100vw - 21px * 3) / 2 / 4 * 5);
+  overflow: hidden;
+  grid-area: 1/-1;
+  display: grid;
+  z-index: 0;
+}
+#collection .interstitial .media .one {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><filter id='noiseFilter'><feTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23noiseFilter)'/></svg>");
+  background-size: 200px 200px;
+  background-repeat: repeat;
+  mix-blend-mode: multiply;
+  filter: grayscale(1);
+  grid-area: 1/-1;
+  z-index: 0;
+}
+#collection .interstitial .media .two {
+  background: rgba(0, 0, 0, 0.84375);
+  grid-area: 1/1;
+  z-index: 1;
+}
+#collection .interstitial .media .three {
+  background: linear-gradient(transparent, black);
+  filter: blur(175px);
+  grid-area: 1/1;
+  z-index: 2;
+}
+#collection .interstitial .caption {
+  
+}
+#collection .interstitial .caption a {
+  text-decoration-color: rgba(0, 0, 0, 0.125);
+  text-underline-offset: 2px;
+  font-style: italic;
+  color: inherit;
+}
+#collection .interstitial .caption a:is(:hover, :focus) {
+  text-decoration-color: rgb(0 0 0 / 0.25);
+}
+@media(min-width: 768px) {
+  #collection > .interstitial {
+    margin-inline: calc(var(--leading) * 1.5);
+    grid-column: span 12;
+  }
+  #collection .interstitial .media {
+    height: calc((100vw - 21px * 15) / 4 / 4 * 5);
+  }
+}

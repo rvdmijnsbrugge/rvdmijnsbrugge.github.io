@@ -1,0 +1,128 @@
+/*
+
+  © 2026 Rembrant Van der Mijnsbrugge
+  All rights reserved
+
+  Contact r@mote.agency for licensing
+
+  Revenue = Session × Conversion Rate × Average Order Value
+  Profit = Customer Lifetime Value ÷ Customer Acquisition Cost
+
+*/
+
+body > footer {
+  padding-inline: calc(var(--leading) * 0.5);
+  padding-block: calc(var(--leading) * 1);
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(var(--leading) * 2) 0;
+  align-items: start;
+  display: grid;
+}
+
+body > footer form {
+  padding: 0 calc(var(--leading) * 0.5);
+  grid-column: 1 / -1;
+}
+body > footer p {
+  margin: 0 0 calc(var(--leading) * 0.5) 0;
+}
+body > footer i {
+  margin: 0 0 calc(var(--leading) * 1) 0;
+  display: block;
+}
+body > footer fieldset {
+  border-bottom: 1px solid rgb(var(--dark) / 0.125);
+  border-top: 1px solid transparent;
+  grid-template-columns: 1fr auto;
+  border-right: none;
+  border-left: none;
+  display: grid;
+  padding: 0;
+  margin: 0;
+}
+body > footer fieldset:hover {
+  border-bottom: 1px solid rgb(var(--dark) / 0.25);
+}
+body > footer fieldset:focus-within {
+  border-bottom: 1px solid rgb(var(--dark) / 1);
+}
+body > footer input {
+  padding: calc(var(--leading) * 0.25 - 1px) 0;
+  color: rgb(var(--dark) / 1);
+  letter-spacing: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  background: none;
+  appearance: none;
+  font-size: 16px;
+  outline: none;
+  border: none;
+}
+body > footer input::placeholder {
+  font-size: 1rem;
+}
+body > footer button {
+  padding: calc(var(--leading) * 0.25 - 1px) 0;
+  min-width: calc(var(--leading) * 1.5);
+  color: rgb(var(--dark) / 0.785);
+  letter-spacing: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  text-align: right;
+  background: none;
+  appearance: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+}
+body > footer button:hover {
+  color: rgb(var(--dark) / 1);
+}
+
+body > footer nav {
+  padding: 0 calc(var(--leading) * 0.5);
+  gap: calc(var(--leading) * 1);
+  display: grid;
+}
+body > footer ul {
+  gap: calc(var(--leading) * 0.5);
+  list-style: none;
+  display: grid;
+  padding: 0;
+  margin: 0;
+}
+
+body > footer small {
+  padding: 0 calc(var(--leading) * 0.5);
+  grid-template-columns: 1fr auto;
+  grid-column: 1 / -1;
+  font-size: inherit;
+  opacity: 0.375;
+  display: grid;
+}
+
+@media(min-width: 768px) {
+  body > footer {
+    padding-inline: calc(var(--leading) * 1.5);
+    grid-template-columns: repeat(24, 1fr);
+    gap: calc(var(--leading) * 3) 0;
+  }
+  body > footer form {
+    padding: 0 calc(var(--leading) * 1.5);
+    grid-column: 16 / span 9;
+  }
+  body > footer p {
+    margin: 0 0 calc(var(--leading) * 1) 0;
+  }
+  body > footer i {
+    margin: 0 0 calc(var(--leading) * 1.75) 0;
+  }
+  body > footer nav {
+    padding: 0 calc(var(--leading) * 1.5);
+    grid-column: span 4;
+    order: -1;
+  }
+  body > footer small {
+    padding: 0 calc(var(--leading) * 1.5);
+  }
+}

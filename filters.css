@@ -1,0 +1,107 @@
+/*
+
+  © 2026 Rembrant Van der Mijnsbrugge
+  All rights reserved
+
+  Contact r@mote.agency for licensing
+
+  https://web.dev/blog/popover-api
+
+*/
+
+#filters {
+  max-height: calc(100% - var(--leading) * 1);
+  max-width: calc(100% - var(--leading) * 1);
+  margin: calc(var(--leading) * 0.5);
+  margin-top: auto;
+  height: 75vh;
+  border: none;
+  width: 100%;
+  padding: 0;
+}
+#filters:popover-open {
+  grid-template-rows: auto 1fr auto;
+  display: grid;
+}
+@media(min-width: 768px) {
+  #filters {
+    height: calc(100dvh / 8 * 5);
+    width: calc(100vw / 8 * 5);
+    margin-inline: auto;
+  }
+}
+
+#filters nav {
+  padding: calc(var(--leading) * 1.5) calc(var(--leading) * 0.5);
+  gap: calc(var(--leading) * 0.5);
+  align-content: start;
+  display: grid;
+}
+#filters details summary {
+  list-style: none;
+  cursor: pointer;
+}
+#filters details summary:hover {
+  text-decoration: underline rgb(var(--dark) / 0.25);
+  text-underline-offset: 2px;
+}
+#filters details summary::after {
+  float: right;
+  content: '+';
+}
+#filters details[open] summary::after {
+  content: '–';
+}
+#filters ul {
+  padding: calc(var(--leading) * 1) 0 calc(var(--leading) * 1.5) 0;
+  gap: calc(var(--leading) * 0.5) calc(var(--leading) * 1);
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+  display: grid;
+  margin: 0;
+}
+#filters details:last-child ul {
+  padding: calc(var(--leading) * 1) 0 0 0;
+}
+#filters label {
+  gap: calc(var(--leading) * 0.25);
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  display: grid;
+}
+#filters input {
+  margin: 0;
+}
+
+#filters footer {
+  grid-template-columns: repeat(2, 1fr);
+  padding: calc(var(--leading) * 0.5);
+  gap: calc(var(--leading) * 0.5);
+  display: grid;
+}
+#filters button[type="reset"] {
+  padding: calc(var(--leading) * 0.25) calc(var(--leading) * 0.75);
+  background: rgb(var(--dark) / 0.03125);
+  color: rgb(var(--dark) / 1);
+  line-height: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border: none;
+}
+#filters button[type="reset"]:hover {
+  background: rgb(var(--dark) / 0.0625);
+}
+#filters button[type="submit"] {
+  padding: calc(var(--leading) * 0.25) calc(var(--leading) * 0.75);
+  background: rgb(var(--dark) / 0.875);
+  line-height: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+#filters button[type="submit"]:hover {
+  background: rgb(var(--dark) / 1);
+}

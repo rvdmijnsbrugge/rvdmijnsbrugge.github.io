@@ -1,0 +1,28 @@
+/*
+
+  © 2026 Rembrant Van der Mijnsbrugge
+  All rights reserved
+
+  Contact r@mote.agency for licensing
+
+  Revenue = Session × Conversion Rate × Average Order Value
+  Profit = Customer Lifetime Value ÷ Customer Acquisition Cost
+
+*/
+
+body > header {
+  grid-template-columns: repeat(3, auto) 1fr repeat(3, auto);
+  padding: calc(var(--leading) * 1);
+  gap: calc(var(--leading) * 1);
+  align-items: center;
+  text-align: center;
+  position: sticky;
+  display: grid;
+  z-index: 1;
+  top: 0;
+}
+@media(min-width: 768px) {
+  body > header {
+    padding-inline: calc(var(--leading) * 3);
+  }
+}

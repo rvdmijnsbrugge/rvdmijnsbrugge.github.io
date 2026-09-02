@@ -1,0 +1,94 @@
+/*
+
+  © 2026 Rembrant Van der Mijnsbrugge
+  All rights reserved
+
+  Contact r@mote.agency for licensing
+
+  Revenue = Session × Conversion Rate × Average Order Value
+  Profit = Customer Lifetime Value ÷ Customer Acquisition Cost
+
+*/
+
+#home {
+  padding-inline: calc(var(--leading) * 1);
+}
+@media(min-width: 768px) {
+  #home {
+    padding-inline: calc(var(--leading) * 3);
+  }
+}
+
+#home > .products {
+  gap: calc(var(--leading) * 2) calc(var(--leading) * 1);
+  padding-block: calc(var(--leading) * 2);
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+}
+@media(min-width: 768px) {
+  #home > .products {
+    padding-block: calc(var(--leading) * 3);
+    grid-template-columns: repeat(4, 1fr);
+    gap: calc(var(--leading) * 3);
+  }
+}
+
+#home > .collections {
+  gap: calc(var(--leading) * 2) calc(var(--leading) * 1);
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+}
+#home > .collections .collection {
+  padding: calc(var(--leading) * 1);
+  gap: calc(var(--leading) * 0.5);
+  background: rgb(0 0 0 / 0.875);
+  place-content: end center;
+  aspect-ratio: 4 / 5;
+  text-align: center;
+  display: grid;
+  color: white;
+}
+#home > .collections a {
+  text-decoration-color: rgba(255 255 255 / 0.25);
+}
+#home > .collections a:is(:hover, :focus) {
+  text-decoration-color: rgb(255 255 255 / 0.5);
+}
+@media(min-width: 768px) {
+  #home > .collections {
+    gap: calc(var(--leading) * 3);
+  }
+  #home > .collections .collection {
+    aspect-ratio: 3 / 2;
+  }
+}
+
+#home > .about {
+  padding-bottom: calc(var(--leading) * 1);
+  padding-top: calc(var(--leading) * 2);
+  gap: calc(var(--leading) * 1);
+  display: grid;
+}
+#home > .about .media {
+  background: rgb(var(--light) / 1);
+  aspect-ratio: 3 / 2;
+}
+#home > .about .caption {
+  gap: calc(var(--leading) * 1);
+  place-content: end start;
+  display: grid;
+}
+@media(min-width: 768px) {
+  #home > .about {
+    grid-template-columns: repeat(8, 1fr);
+    padding-bottom: calc(var(--leading) * 2);
+    padding-top: calc(var(--leading) * 3);
+    gap: calc(var(--leading) * 3);
+  }
+  #home > .about .media {
+    grid-column: span 4;
+  }
+  #home > .about .caption {
+    grid-column: 6 / span 3;
+  }
+}
