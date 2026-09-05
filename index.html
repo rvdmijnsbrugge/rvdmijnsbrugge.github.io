@@ -21,7 +21,7 @@
       }
       @media (orientation: landscape) {
         body {
-          min-height: calc(100svh - 42px);
+          min-height: calc(100dvh - 42px);
         }
       }
       main {
@@ -34,12 +34,6 @@
         font-weight: 400;
         font-size: 13px;
       }
-      h2 {
-        margin: 0 0 21px 0;
-        line-height: 21px;
-        font-weight: 400;
-        font-size: 13px;
-      }
       p {
         color: rgb(0, 0, 0, 0.875);
         margin: 0 0 21px 0;
@@ -47,7 +41,6 @@
       a {
         text-decoration-color: rgb(0, 0, 0, 0.125);
         text-underline-offset: 2px;
-        color: rgb(0, 0, 0, 1);
         color: inherit;
       }
       a:hover,
@@ -59,7 +52,7 @@
       }
       canvas {
         background-color: rgb(248, 247, 245);
-        margin: 0 0 21px 0;
+        margin: 21px 0 21px 0;
         cursor: pointer;
         height: 336px;
         width: 336px;
@@ -75,29 +68,29 @@
       <h1>
         <a href="/">Rembrant</a>
       </h1>
-      <h2>
-        I'm a design engineer and creator of <em>Emergence</em>&mdash;a design system for e-commerce, based on behavioral science.
+      <p>
+        I'm a design engineer and creator of <em>Emergence</em>&mdash;a design system for ecommerce grounded in behavioral science.
         <br/>
         <em>
           <a target="_blank" href="https://rvdmijnsbrugge.myshopify.com">View the demo</a>
         </em>
-      </h2>
+      </p>
       <p>
         Contact me for licensing:
         <em>
           <a href="mailto:r@mote.agency?subject=Emergence%20Licensing">r@mote.agency</a>
         </em>
       </p>
-      <canvas width="1344" height="1344"></canvas>
+      <canvas width="1344" height="1344" aria-hidden="true"></canvas>
       <footer>
         <em>
-          <a href="https://www.shopify.com/blog/search?q=Rembrant">Shopify</a>
+          <a target="_blank" href="https://www.shopify.com/blog/search?q=Rembrant">Shopify</a>
         </em>
         <em>
-          <a href="https://github.com/rvdmijnsbrugge">GitHub</a>
+          <a target="_blank" href="https://github.com/rvdmijnsbrugge">GitHub</a>
         </em>
         <em>
-          <a href="https://x.com/rvdmijnsbrugge">Twitter</a>
+          <a target="_blank" href="https://x.com/rvdmijnsbrugge">Twitter</a>
         </em>
       </footer>
     </main>
