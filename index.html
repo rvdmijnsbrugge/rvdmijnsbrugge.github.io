@@ -13,12 +13,16 @@
       }
       body {
         -webkit-font-smoothing: antialiased;
-        min-height: calc(100svh - 42px);
         place-content: center;
         line-height: 21px;
         font-size: 13px;
         display: grid;
         margin: 21px;
+      }
+      @media (orientation: landscape) {
+        body {
+          min-height: calc(100svh - 42px);
+        }
       }
       main {
         max-width: 336px;
@@ -69,21 +73,32 @@
   <body>
     <main>
       <h1>
-        <a href="https://rvdmijnsbrugge.github.io">Rembrant</a>
+        <a href="/">Rembrant</a>
       </h1>
       <h2>
-        I'm a design engineer and creator of Emergence&mdash;a design system for e-commerce, based on behavioral science.
+        I'm a design engineer and creator of <em>Emergence</em>&mdash;a design system for e-commerce, based on behavioral science.
         <br/>
-        <a target="_blank" href="https://rvdmijnsbrugge.myshopify.com">View the demo</a>
+        <em>
+          <a target="_blank" href="https://rvdmijnsbrugge.myshopify.com">View the demo</a>
+        </em>
       </h2>
       <p>
-        Contact me for licensing: <a href="mailto:r@mote.agency?subject=Emergence%20Licensing">r@mote.agency</a>
+        Contact me for licensing:
+        <em>
+          <a href="mailto:r@mote.agency?subject=Emergence%20Licensing">r@mote.agency</a>
+        </em>
       </p>
       <canvas width="1344" height="1344"></canvas>
       <footer>
-        <a href="https://www.shopify.com/blog/search?q=Rembrant">Shopify</a>
-        <a href="https://github.com/rvdmijnsbrugge">GitHub</a>
-        <a href="https://x.com/rvdmijnsbrugge">Twitter</a>
+        <em>
+          <a href="https://www.shopify.com/blog/search?q=Rembrant">Shopify</a>
+        </em>
+        <em>
+          <a href="https://github.com/rvdmijnsbrugge">GitHub</a>
+        </em>
+        <em>
+          <a href="https://x.com/rvdmijnsbrugge">Twitter</a>
+        </em>
       </footer>
     </main>
     <script>
