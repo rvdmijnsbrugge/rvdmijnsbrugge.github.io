@@ -52,7 +52,7 @@
       }
       canvas {
         background-color: rgb(248, 247, 245);
-        margin: 21px 0 21px 0;
+        margin: 21px 0 42px 0;
         cursor: pointer;
         height: 336px;
         width: 336px;
@@ -230,6 +230,9 @@
       }
       canvas.addEventListener("click", play);
       for (const a of document.querySelectorAll("a")) a.addEventListener("mouseenter", play);
+      // Scrolling replays it too: "scroll" when the page actually moves, "wheel" and "touchmove" for
+      // viewports where the page fits and a scroll gesture moves nothing.
+      for (const type of ["scroll", "wheel", "touchmove"]) window.addEventListener(type, play, { passive: true });
       window.addEventListener("load", () => setTimeout(play, 1000));
     </script>
   </body>
